@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrich-kray/portfolio-generator.git"
+  },
+  "author": "Ryan Kray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rrich-kray/portfolio-generator/issues"
+  },
+  "homepage": "https://github.com/rrich-kray/portfolio-generator#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
