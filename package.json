@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rrich-kray/portfolio-generator#readme",
   "dependencies": {
     "express": "^4.17.2",
+    "inherits": "^2.0.4",
     "inquirer": "^8.2.0"
   }
 }
