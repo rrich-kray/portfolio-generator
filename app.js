@@ -1,6 +1,6 @@
-const { writeFile, copyFile } = require('./utils/generateSite.js')
 const inquirer = require('inquirer');
 const generatePage = require('./src/page-template');
+const { writeFile, copyFile } = require('./utils/generate-site');
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -127,25 +127,20 @@ Add a New Project
 };
 
 promptUser()
-    .then(promptProject)
-    .then(portfolioData => {
-        return generatePage(portfolioData);
-    })
-    .then(pageHTML => {
-        return writeFile(pageHTML);;
-    })
-    .then(writeFileResponse => {
-        console.log(writeFileResponse);
-        return copyFile();
-    })
-    .then(copyFileResponse => {
-        console.log(copyFileResponse);
-    })
-    .catch(err => {
-        console.log(err);
-    })
-
-
-    // Synchronous code is code that runs in sequence. It has the potential to block a single thread, which can result in a very poor user experience.
-    // Asynchronous code allows some code to run "behind the scenes" so that othjer code can run in the meantime. This resulta in better wait times for the users, and overall better user experiences
-    // Callback functions and promises are two ways to handle asynchrounous code
+  .then(promptProject)
+  .then(portfolioData => {
+    return generatePage(portfolioData);
+  })
+  .then(pageHTML => {
+    return writeFile(pageHTML);
+  })
+  .then(writeFileResponse => {
+    console.log(writeFileResponse);
+    return copyFile();
+  })
+  .then(copyFileResponse => {
+    console.log(copyFileResponse);
+  })
+  .catch(err => {
+    console.log(err);
+  });
